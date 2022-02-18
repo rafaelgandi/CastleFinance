@@ -6,10 +6,10 @@ function routeTo(pageId, data = null) {
     const $page = byId(pageId);
 
     if (pageId === 'front-page') {
-        document.body.style.backgroundColor = 'var(--body-bg-color)';
+        document.body.classList.add('in-frontpage-view');
     }
     else {
-        document.body.style.backgroundColor = '#000';
+        document.body.classList.remove('in-frontpage-view');
     }
 
     //console.log($page.children[0].tagName);
