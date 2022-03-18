@@ -41,6 +41,7 @@ class CfUpdateBalanceDialog extends HTMLElement {
         this.currentAccount = null;
         this.$accountNameLabel.textContent = '';
         this.$balanceInput.value = '';
+        window.scrollTo(0, 0);
     }
 
     show() {
@@ -62,6 +63,7 @@ class CfUpdateBalanceDialog extends HTMLElement {
         appData.updateAccount(this.currentAccount.iden, this.currentAccount);
         triggerEvent(document.querySelector('cf-front-page'), 'refresh');
         this.hide();
+        window.scrollTo(0, 0);
     }
 
     onAdd() {
